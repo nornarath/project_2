@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="58406641-a082-428d-ad2d-ba810c7a4ba6">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString>
+		<![CDATA[SELECT
+     customer_tbl.`id` AS customer_tbl_id,
+     customer_tbl.`name` AS customer_tbl_name,
+     customer_tbl.`number` AS customer_tbl_number,
+     customer_tbl.`status` AS customer_tbl_status,
+     customer_tbl.`bill_address` AS customer_tbl_bill_address,
+     customer_tbl.`ship_address` AS customer_tbl_ship_address,
+     customer_tbl.`bankno` AS customer_tbl_bankno,
+     customer_tbl.`city` AS customer_tbl_city,
+     customer_tbl.`personname` AS customer_tbl_personname,
+     customer_tbl.`contact` AS customer_tbl_contact,
+     customer_tbl.`tpnumber` AS customer_tbl_tpnumber,
+     customer_tbl.`email` AS customer_tbl_email,
+     customer_tbl.`online` AS customer_tbl_online
+FROM
+     `customer_tbl` customer_tbl ]]>
+	</queryString>
+	<field name="customer_tbl_id" class="java.lang.Integer"/>
+	<field name="customer_tbl_name" class="java.lang.String"/>
+	<field name="customer_tbl_number" class="java.lang.String"/>
+	<field name="customer_tbl_status" class="java.lang.String"/>
+	<field name="customer_tbl_bill_address" class="java.lang.String"/>
+	<field name="customer_tbl_ship_address" class="java.lang.String"/>
+	<field name="customer_tbl_bankno" class="java.lang.String"/>
+	<field name="customer_tbl_city" class="java.lang.String"/>
+	<field name="customer_tbl_personname" class="java.lang.String"/>
+	<field name="customer_tbl_contact" class="java.lang.String"/>
+	<field name="customer_tbl_tpnumber" class="java.lang.String"/>
+	<field name="customer_tbl_email" class="java.lang.String"/>
+	<field name="customer_tbl_online" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="158" height="33" uuid="aadd9859-46eb-47b1-bb58-f086d84779b6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Company Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="1" y="46" width="157" height="22" uuid="9a31ee39-f745-4aa5-b0e9-d0f8781c0c21"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[View customer By HR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="158" y="48" width="157" height="22" uuid="2e472bbc-66a1-43df-9092-6cde9580a741"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tel : 123141516]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="4fb66128-54c5-493d-82e6-15d925a3caf3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="158" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="d22f34d5-f88f-4aab-8c8e-c74e53efd25f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="15" width="77" height="15" uuid="b0f032f6-24e7-4df6-b157-bc391303f1b3"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="0" y="47" width="77" height="15" uuid="edfd0529-b754-4e8e-9c21-c0c0fed9dffc"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="0" y="79" width="77" height="15" uuid="3b3e6eb4-7dee-4a73-8282-63ff77255065"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="0" y="113" width="77" height="15" uuid="b94dcd37-3b38-4673-9e78-bf3526c92362"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Online]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Detail" x="0" y="32" width="77" height="15" uuid="1475633d-2391-48bb-bdf3-8ef778ae03e9"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_tbl_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="0" y="64" width="77" height="15" uuid="fc5f2fb6-5b7e-4152-980f-648d910be893"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_tbl_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="0" y="96" width="77" height="15" uuid="5fd1e829-1f51-4082-bbf4-0139ec5c0ec1"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_tbl_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="0" y="130" width="77" height="15" uuid="908aa7df-52a7-4bc1-b64c-009a2ac4de8f"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_tbl_online}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="178" y="0" width="89" height="15" uuid="6e243015-dde1-4076-a4c6-ff9f3a4b78bd"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Billing Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="178" y="32" width="89" height="15" uuid="3002f48f-c54c-4dee-ade1-f201de60630a"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Shipping Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="178" y="64" width="42" height="15" uuid="02f9500c-537b-4de1-b03d-33a3d1139db6"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Bankno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="178" y="98" width="42" height="15" uuid="bdb64a97-2fe5-4d25-a8ef-8a8b20b4fd70"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[City]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Detail" x="178" y="17" width="89" height="15" uuid="068fe63f-076a-4f72-8b30-4827d247a595"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_tbl_bill_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="178" y="49" width="89" height="15" uuid="ebd0ea53-7353-4889-8d2f-20b5086a84fa"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_tbl_ship_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="178" y="81" width="89" height="15" uuid="a3f83305-41d9-4083-bc5a-756d86abc54d"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_tbl_bankno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="178" y="115" width="89" height="15" uuid="8ab3ad0f-4d25-4fb8-8540-d733ec9349d8"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_tbl_city}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="359" y="0" width="68" height="15" uuid="5aa89471-99a1-46e6-a3ad-2559afa46813"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Person Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="359" y="32" width="42" height="15" uuid="9602d11e-db60-4ef1-8302-b82d0d8ae91c"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Detail" x="359" y="17" width="90" height="15" uuid="a9d28618-0a9e-418e-98f2-db8514809359"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_tbl_personname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="359" y="49" width="90" height="15" uuid="c66d1f71-d991-4140-9c1f-344aebfea2b0"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_tbl_contact}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="359" y="66" width="68" height="15" uuid="bfe0425f-a393-4e65-986b-c99e3d59a9d8"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[TP Number]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Detail" x="359" y="83" width="90" height="15" uuid="4b96d239-a570-4c0a-8401-40c81a64360a"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_tbl_tpnumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="359" y="98" width="68" height="15" uuid="78ca49e1-3e47-48a8-88b3-d5930d22e928"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Detail" x="359" y="113" width="68" height="15" uuid="260896fd-5ffb-4b0e-a586-06d2e28f997d"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_tbl_email}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="1" y="0" width="29" height="15" uuid="ed3e72d2-fc4d-4488-b1a4-7fa7a95d1de4"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ ID :]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Detail" x="44" y="0" width="16" height="15" uuid="33b656ee-2b8d-4742-92c2-a6d44106dea5"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_tbl_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="50" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="38689442-ea87-46da-8446-2e705b714010"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="c5b9fb11-ad35-4e34-96e5-353fc35c4fff"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="d66a5842-bdb2-445a-a159-9094ec978156"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="7636330f-35cd-45ef-9062-367d5367b748"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

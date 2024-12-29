@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2d966e06-3285-4cea-a0b6-04d5c20cdea6">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="cus_ID" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     customer_tbl.`id` AS customer_tbl_id,
+     customer_tbl.`name` AS customer_tbl_name,
+     customer_tbl.`number` AS customer_tbl_number,
+     customer_tbl.`status` AS customer_tbl_status,
+     customer_tbl.`bill_address` AS customer_tbl_bill_address,
+     customer_tbl.`ship_address` AS customer_tbl_ship_address,
+     customer_tbl.`bankno` AS customer_tbl_bankno,
+     customer_tbl.`city` AS customer_tbl_city,
+     customer_tbl.`personname` AS customer_tbl_personname,
+     customer_tbl.`contact` AS customer_tbl_contact,
+     customer_tbl.`tpnumber` AS customer_tbl_tpnumber,
+     customer_tbl.`email` AS customer_tbl_email,
+     customer_tbl.`online` AS customer_tbl_online
+FROM
+     `customer_tbl` customer_tbl WHERE id = $P{cus_ID}]]>
+	</queryString>
+	<field name="customer_tbl_id" class="java.lang.Integer"/>
+	<field name="customer_tbl_name" class="java.lang.String"/>
+	<field name="customer_tbl_number" class="java.lang.String"/>
+	<field name="customer_tbl_status" class="java.lang.String"/>
+	<field name="customer_tbl_bill_address" class="java.lang.String"/>
+	<field name="customer_tbl_ship_address" class="java.lang.String"/>
+	<field name="customer_tbl_bankno" class="java.lang.String"/>
+	<field name="customer_tbl_city" class="java.lang.String"/>
+	<field name="customer_tbl_personname" class="java.lang.String"/>
+	<field name="customer_tbl_contact" class="java.lang.String"/>
+	<field name="customer_tbl_tpnumber" class="java.lang.String"/>
+	<field name="customer_tbl_email" class="java.lang.String"/>
+	<field name="customer_tbl_online" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="2" width="263" height="24" forecolor="#0000FF" uuid="52f41430-e0cf-403e-83d1-086a2a3d6746"/>
+				<textElement verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[ABC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="26" width="251" height="18" uuid="8ba14ccb-b7ca-49f3-93f7-e01ce860fb67"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ABC Company Co.Ltd,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="1" y="44" width="251" height="18" uuid="f21b489f-0412-43c4-8500-004862f762b7"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chrouy Changva Branch]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="22c9c133-63ac-46fd-97c9-9be1ed160ea5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="1" y="15" width="197" height="20" uuid="24970ac8-6772-4609-9c03-0e66d9b0f011"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="244" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="f13b39ab-2a76-4117-aa01-56a1c7acf01f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="131" y="1" width="86" height="15" uuid="c2255ff1-497b-4f98-967d-8ec9fb125d23"/>
+				<textFieldExpression><![CDATA[$F{customer_tbl_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="133" y="46" width="86" height="15" uuid="38bb204e-d933-4806-a145-2476ca2b2e96"/>
+				<textFieldExpression><![CDATA[$F{customer_tbl_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="133" y="61" width="86" height="15" uuid="22888263-3511-406b-abdd-927510c006e1"/>
+				<textFieldExpression><![CDATA[$F{customer_tbl_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="133" y="76" width="86" height="15" uuid="2d18c257-e6bd-473c-ab79-af17aea2cc40"/>
+				<textFieldExpression><![CDATA[$F{customer_tbl_bill_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="133" y="91" width="86" height="15" uuid="8d686860-b76e-47a7-a19d-0390ee5660e9"/>
+				<textFieldExpression><![CDATA[$F{customer_tbl_ship_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="133" y="126" width="116" height="15" uuid="0b3a7b32-4a1c-4604-8676-2822cc66f268"/>
+				<textFieldExpression><![CDATA[$F{customer_tbl_bankno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="133" y="141" width="116" height="15" uuid="2390533c-5d84-488c-9071-b07f6639e416"/>
+				<textFieldExpression><![CDATA[$F{customer_tbl_city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="133" y="156" width="116" height="15" uuid="049c470e-5737-4b71-8a6a-48f154f34e69"/>
+				<textFieldExpression><![CDATA[$F{customer_tbl_personname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="133" y="171" width="116" height="15" uuid="cabbd1ee-5d09-4495-a88e-41b113570164"/>
+				<textFieldExpression><![CDATA[$F{customer_tbl_contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="133" y="186" width="116" height="15" uuid="41baaf91-8439-42d8-b3c9-c925913914a4"/>
+				<textFieldExpression><![CDATA[$F{customer_tbl_tpnumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="133" y="201" width="116" height="15" uuid="5a07c723-a6ac-444c-bb58-2e202d4a2d93"/>
+				<textFieldExpression><![CDATA[$F{customer_tbl_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="132" y="106" width="86" height="15" uuid="21e0e39a-98ed-4533-b3ad-aa93f930275f"/>
+				<textFieldExpression><![CDATA[$F{customer_tbl_online}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="24" y="0" width="88" height="15" uuid="e1de9f9b-8b98-467c-8c41-d7d3c5159768"/>
+				<text><![CDATA[ID:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="23" y="46" width="109" height="15" uuid="077daca4-5d14-49cb-9cd3-5e310a4e8a55"/>
+				<text><![CDATA[Number Phone :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="23" y="31" width="109" height="15" uuid="f6055fb7-c02c-4086-8320-0d12d47400c0"/>
+				<text><![CDATA[Customer Name :]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Detail" x="132" y="31" width="86" height="15" uuid="1919b0a6-107d-4fa2-b21d-159e6dac0a58"/>
+				<textFieldExpression><![CDATA[$F{customer_tbl_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="23" y="61" width="109" height="15" uuid="1dbd902e-3360-4132-b17a-757b9dc050a2"/>
+				<text><![CDATA[Status :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="23" y="76" width="109" height="15" uuid="3ffabad5-f389-475a-bff9-236b4d881e9d"/>
+				<text><![CDATA[Billing Address :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="23" y="91" width="109" height="15" uuid="048bd2bd-c1d7-4dd1-9252-0330149e3c0f"/>
+				<text><![CDATA[Shipping Address :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="25" y="125" width="108" height="15" uuid="dc465e9f-7c6c-4032-a022-b7c604284462"/>
+				<text><![CDATA[Bank no :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="25" y="141" width="108" height="15" uuid="0e07c052-0009-4bfe-abf2-a2c64bb3374f"/>
+				<text><![CDATA[City :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="25" y="156" width="108" height="15" uuid="a383e11c-24d9-481c-b672-a85ca31dbf26"/>
+				<text><![CDATA[Personal Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="25" y="171" width="108" height="15" uuid="4cb39784-7012-4912-998c-820448a65966"/>
+				<text><![CDATA[Contact :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="25" y="186" width="108" height="15" uuid="ab328207-2cb5-4054-b430-14ca653d2b4e"/>
+				<text><![CDATA[Tp Number :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="25" y="201" width="108" height="15" uuid="2dde2707-0355-4548-9063-0d8c41156c0a"/>
+				<text><![CDATA[Email :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="23" y="106" width="108" height="15" uuid="06ff9c2d-4371-4e64-ad7e-79ec20afd438"/>
+				<text><![CDATA[Online :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="13" y="24" width="1" height="201" uuid="5765d815-a5e4-4518-894c-01ca5e4ebc96"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="465" y="24" width="1" height="201" uuid="955234bd-27c3-4afb-9fa5-a8b1e2429873"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="13" y="225" width="452" height="1" uuid="90789f02-3d74-48bc-9fec-9442360d604f"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="14" y="24" width="452" height="1" uuid="a321065f-98e7-4b4f-963d-8d6cd7722e4d"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="140" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="f26383ca-1b78-46ee-a7c0-9d1040c6651b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="SubTitle" x="146" y="18" width="251" height="16" uuid="bc68ab87-2b9e-4ce7-a78a-f830de264b52"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Narrow" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ABC Chrouy Changva Co.Ltd,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="146" y="34" width="251" height="16" uuid="067133fc-7c9c-4d84-a5a8-0c81191a351a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Narrow" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tel : 12345678910]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="146" y="50" width="251" height="16" uuid="701decee-572f-464c-9fe5-e448224ae42d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Narrow" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chrouy Changva Branch]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="133" y="4" width="251" height="16" uuid="d14c3836-2d60-41b0-8255-8a5d9ea15047"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Narrow" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thank You For Purchase and Supported my Mertket]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="348b4b6b-5c7b-4965-93ee-e56d1a499878"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="8060fb41-27e1-46e8-97fb-13787ee0cb98"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ef5e1a9a-31a0-4a1c-89d4-45e799735139">
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     grn_tbl.`id` AS grn_tbl_id,
+     grn_tbl.`grnno` AS grn_tbl_grnno,
+     grn_tbl.`sid` AS grn_tbl_sid,
+     grn_tbl.`barcode` AS grn_tbl_barcode,
+     grn_tbl.`item_name` AS grn_tbl_item_name,
+     grn_tbl.`qty` AS grn_tbl_qty,
+     grn_tbl.`cost_price` AS grn_tbl_cost_price,
+     grn_tbl.`sell_price` AS grn_tbl_sell_price,
+     grn_tbl.`total_price` AS grn_tbl_total_price,
+     grn_tbl.`exp` AS grn_tbl_exp,
+     grn_tbl.`subtotal` AS grn_tbl_subtotal,
+     grn_tbl.`discount` AS grn_tbl_discount,
+     grn_tbl.`nettotal` AS grn_tbl_nettotal
+FROM
+     `grn_tbl` grn_tbl]]>
+	</queryString>
+	<field name="grn_tbl_id" class="java.lang.Integer"/>
+	<field name="grn_tbl_grnno" class="java.lang.String"/>
+	<field name="grn_tbl_sid" class="java.lang.String"/>
+	<field name="grn_tbl_barcode" class="java.lang.String"/>
+	<field name="grn_tbl_item_name" class="java.lang.String"/>
+	<field name="grn_tbl_qty" class="java.lang.String"/>
+	<field name="grn_tbl_cost_price" class="java.lang.String"/>
+	<field name="grn_tbl_sell_price" class="java.lang.String"/>
+	<field name="grn_tbl_total_price" class="java.lang.String"/>
+	<field name="grn_tbl_exp" class="java.lang.String"/>
+	<field name="grn_tbl_subtotal" class="java.lang.String"/>
+	<field name="grn_tbl_discount" class="java.lang.String"/>
+	<field name="grn_tbl_nettotal" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="453bd766-6ac8-4bb6-ae86-042ec9807bc6"/>
+				<imageExpression><![CDATA["leaf_banner_red.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="49ee3031-cb25-4fac-b576-4290c93d2b5d"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Red Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="ac02a5ee-6de0-491c-8b53-e40281a12b16"/>
+				<text><![CDATA[Leaf Red SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="acd67a15-6a87-41b9-ab0c-209ecf4dd142"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="42" height="15" uuid="2ee761b6-debd-4ae3-a28c-41cc24754bf9"/>
+				<text><![CDATA[grn_tbl_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="42" y="19" width="42" height="15" uuid="39cd18cb-9a97-4b40-8507-cb8413e9fa54"/>
+				<text><![CDATA[grn_tbl_grnno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="84" y="19" width="42" height="15" uuid="b81432b9-055a-431e-b2e1-788838b38a95"/>
+				<text><![CDATA[grn_tbl_sid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="126" y="19" width="42" height="15" uuid="601b87be-54d0-4e4e-86e1-28ed70725358"/>
+				<text><![CDATA[grn_tbl_barcode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="168" y="19" width="42" height="15" uuid="63328b27-79a7-49b6-a559-b8ed655efe7e"/>
+				<text><![CDATA[grn_tbl_item_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="210" y="19" width="42" height="15" uuid="d295b5c6-0fe2-459b-8474-a59310471834"/>
+				<text><![CDATA[grn_tbl_qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="252" y="19" width="42" height="15" uuid="3e48259b-b0fe-4456-ac19-a639510b06e2"/>
+				<text><![CDATA[grn_tbl_cost_price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="294" y="19" width="42" height="15" uuid="0702e15c-9901-43a1-a16a-a2b76cdcc321"/>
+				<text><![CDATA[grn_tbl_sell_price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="336" y="19" width="42" height="15" uuid="dac25005-ac89-4d5a-9e72-380db5b033b7"/>
+				<text><![CDATA[grn_tbl_total_price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="378" y="19" width="42" height="15" uuid="a2e96199-9b06-4a8e-91a5-34bbdfb3169e"/>
+				<text><![CDATA[grn_tbl_exp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="420" y="19" width="42" height="15" uuid="1e13aaec-ea79-4329-bf39-759ef392e547"/>
+				<text><![CDATA[grn_tbl_subtotal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="462" y="19" width="42" height="15" uuid="ef82870d-4855-471b-b11f-6dbab7151ed5"/>
+				<text><![CDATA[grn_tbl_discount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="504" y="19" width="42" height="15" uuid="4c50b375-0e56-4bfa-bba5-f73982b60a9a"/>
+				<text><![CDATA[grn_tbl_nettotal]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="29d9863b-5898-4f18-bf61-177f7f54b739"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="42" height="15" uuid="906a9def-63b0-402d-93bd-75ba1bf0daf1"/>
+				<textFieldExpression><![CDATA[$F{grn_tbl_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="42" y="0" width="42" height="15" uuid="5e839a5c-fe31-4491-b0fb-ef462bb18300"/>
+				<textFieldExpression><![CDATA[$F{grn_tbl_grnno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="84" y="0" width="42" height="15" uuid="7a6627da-8979-4aec-ac1a-33cf5a12ab2f"/>
+				<textFieldExpression><![CDATA[$F{grn_tbl_sid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="126" y="0" width="42" height="15" uuid="6134ce5c-94ca-4197-93f3-17ca0f2699f0"/>
+				<textFieldExpression><![CDATA[$F{grn_tbl_barcode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="168" y="0" width="42" height="15" uuid="55f54521-73f5-4eed-bc1c-030cbdd9d93c"/>
+				<textFieldExpression><![CDATA[$F{grn_tbl_item_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="210" y="0" width="42" height="15" uuid="3c8c3cde-1b10-4516-88ef-c2166ecd9c8d"/>
+				<textFieldExpression><![CDATA[$F{grn_tbl_qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="252" y="0" width="42" height="15" uuid="a09e6f21-adaf-4526-8170-75753edd320e"/>
+				<textFieldExpression><![CDATA[$F{grn_tbl_cost_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="294" y="0" width="42" height="15" uuid="e2dd4e00-9e2b-4688-8d8c-e882c286178d"/>
+				<textFieldExpression><![CDATA[$F{grn_tbl_sell_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="336" y="0" width="42" height="15" uuid="a2ca419f-a1fd-4787-873a-dcc3d81eeee7"/>
+				<textFieldExpression><![CDATA[$F{grn_tbl_total_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="378" y="0" width="42" height="15" uuid="8b638535-b87d-4287-b6ad-080a5e8d0fff"/>
+				<textFieldExpression><![CDATA[$F{grn_tbl_exp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="420" y="0" width="42" height="15" uuid="c7d9f402-a6f2-482e-9f0d-081e29d154a7"/>
+				<textFieldExpression><![CDATA[$F{grn_tbl_subtotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="462" y="0" width="42" height="15" uuid="e437d429-2136-476a-b06f-9640bb242e77"/>
+				<textFieldExpression><![CDATA[$F{grn_tbl_discount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="504" y="0" width="42" height="15" uuid="9f7e7b3b-a87d-4c62-a85c-c2a1bdf59b07"/>
+				<textFieldExpression><![CDATA[$F{grn_tbl_nettotal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="be0a7a22-0eb9-47dc-a4ab-81023582c0ff"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="1445d06b-b092-42a2-a094-3fc688b797ff"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="4e709e71-0fce-4281-94cc-8d581b7f17f8"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="4dc77c46-224a-4ef0-8625-4433768161a1"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

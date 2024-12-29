@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4cc1d338-2fb1-4045-96a4-e944c44fd0f8">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="id_report" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     sale_tbl.`sale_id` AS sale_tbl_sale_id,
+     sale_tbl.`inid` AS sale_tbl_inid,
+     sale_tbl.`cart_id` AS sale_tbl_cart_id,
+     sale_tbl.`customer_name` AS sale_tbl_customer_name,
+     sale_tbl.`total_qty` AS sale_tbl_total_qty,
+     sale_tbl.`total_bill` AS sale_tbl_total_bill,
+     sale_tbl.`balance` AS sale_tbl_balance,
+     sale_tbl.`status` AS sale_tbl_status
+FROM
+     `sale_tbl` sale_tbl WHERE inid = $P{id_report}]]>
+	</queryString>
+	<field name="sale_tbl_sale_id" class="java.lang.Integer"/>
+	<field name="sale_tbl_inid" class="java.lang.Integer"/>
+	<field name="sale_tbl_cart_id" class="java.lang.Integer"/>
+	<field name="sale_tbl_customer_name" class="java.lang.String"/>
+	<field name="sale_tbl_total_qty" class="java.lang.String"/>
+	<field name="sale_tbl_total_bill" class="java.lang.String"/>
+	<field name="sale_tbl_balance" class="java.lang.String"/>
+	<field name="sale_tbl_status" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="88" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="263" height="22" forecolor="#3300FF" uuid="ef14f83e-8ac6-4b64-94f3-80d57a259652"/>
+				<textElement verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Small Market ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="0" y="22" width="263" height="22" forecolor="#000000" uuid="8edecd3b-2e94-480b-8182-a6c55c4ae0aa"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Chrouy Changva Branch(SM602)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="0" y="44" width="263" height="22" forecolor="#000000" uuid="35a1035d-eb35-4d04-bef7-cd17958bb1fc"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Contact Us : 012398764]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="66" width="197" height="20" uuid="9abba6e1-23df-4d44-a76c-3f61a1739065"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="cb7f2e88-6f13-4a0d-b2bf-6afcbef26600"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="51" height="15" uuid="bed5a3f3-7273-459c-bbdb-269c913a6f2f"/>
+				<text><![CDATA[Sale ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="51" y="19" width="48" height="15" uuid="806ec240-7740-4098-b270-b200ed66d297"/>
+				<text><![CDATA[INID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="99" y="19" width="45" height="15" uuid="b6ba75c6-267b-47bd-9fa0-4753203d9a99"/>
+				<text><![CDATA[Cart ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="144" y="19" width="132" height="15" uuid="7cb091bf-36c1-4961-9a0f-6ba87b75175b"/>
+				<text><![CDATA[Customer Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="69" height="15" uuid="7ac2763d-168d-442b-9def-7331ced98aa9"/>
+				<text><![CDATA[Total QTY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="345" y="19" width="69" height="15" uuid="63151a08-b235-43f5-b0e9-6045283ebc82"/>
+				<text><![CDATA[Total Bill]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="414" y="19" width="69" height="15" uuid="2231d0cc-2242-43fc-a3d2-65cc47b01e4f"/>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="483" y="19" width="69" height="15" uuid="fd74476b-0cbf-4b04-9cd8-058827702e96"/>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="d6ce9ca1-9a15-46da-bf20-c94ba34c16bb"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="51" height="15" uuid="d687f6f8-9f58-49b3-82b7-0d43fd225cf4"/>
+				<textFieldExpression><![CDATA[$F{sale_tbl_sale_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="51" y="0" width="48" height="15" uuid="2dc3621f-c904-4932-9884-a57e57e501ed"/>
+				<textFieldExpression><![CDATA[$F{sale_tbl_inid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="99" y="0" width="45" height="15" uuid="bce390e6-c86c-4192-b5c9-d370ac27af71"/>
+				<textFieldExpression><![CDATA[$F{sale_tbl_cart_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="144" y="0" width="132" height="15" uuid="7dae4426-f848-4488-9ea0-a4ce222b7bff"/>
+				<textFieldExpression><![CDATA[$F{sale_tbl_customer_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="69" height="15" uuid="1e8d8711-69f4-46a3-8086-ffc8abcfa431"/>
+				<textFieldExpression><![CDATA[$F{sale_tbl_total_qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="345" y="0" width="69" height="15" uuid="836ee5ce-0eb4-4ef9-9c27-cbe4ee9de3a6"/>
+				<textFieldExpression><![CDATA[$F{sale_tbl_total_bill}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="414" y="0" width="69" height="15" uuid="61959d19-91b5-4ace-aec9-41f245c2c441"/>
+				<textFieldExpression><![CDATA[$F{sale_tbl_balance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="483" y="0" width="69" height="15" uuid="49d18a3e-74f8-488e-afab-8ffad18be51f"/>
+				<textFieldExpression><![CDATA[$F{sale_tbl_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="72" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="d8d05e96-7654-4c4f-80d6-ea67ffe7085a"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="85e7ba23-68a3-4cc4-9167-d83cce6131c0"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="8b112afa-7a6c-4957-9953-d21296cf3cd9"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
